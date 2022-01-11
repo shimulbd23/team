@@ -11,7 +11,7 @@ background-color: #121212;
 main{
     max-width: 1000px;
     margin: 0 auto;
-    color: white;
+    /* color: white; */
 }
 .banner{
     display: flex;
@@ -27,6 +27,7 @@ main{
     line-height: 2;
     text-align: justify;
     margin: 20px 0;
+    color: white;
 }
 .banner-title{
     font-size: 60px;
@@ -163,4 +164,60 @@ main{
     align-items: center;
     justify-content: center;
     flex: 1;
+}
+
+
+.photo{
+    width: 280px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+.photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.border{
+    background-color: white;
+    position: absolute;
+    transition: 0.7s linear;
+
+}
+.border.top, .border.bottom{
+height: 4px;
+width: 270px;
+}
+.border.left, .border.right{
+    height: 270px;
+    width: 4px;
+}
+.border.top{
+    top: 5px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 5px;
+    left: 100%
+}
+.border.left{
+    top: 100%;
+    left: 5px;
+}
+.border.right{
+    right: 5px;
+    bottom: 100%;
+}
+ 
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 5px;
 }
